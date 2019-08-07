@@ -61,10 +61,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Parent Include="Layers\*.png" />
-    <Content Include="@(Parent)" CopyToOutputDirectory="PreserveNewest">
-      <Link>Layers\%(Filename)%(Extension)</Link>
+    <Content Include="..\Layers\**\*.png" CopyToOutputDirectory="PreserveNewest">
+      <Link>Layers\\%(RecursiveDir)%(Filename)%(Extension)</Link>
     </Content>
+	<Content Include="..\AquilineTwo.ttf" CopyToOutputDirectory="PreserveNewest" />
+	<Content Include="..\Of Wildflowers and Wings 2.ttf" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -20,10 +20,11 @@ namespace SpellParser
         static void Main(string[] args)
         {
             // build cwd
-            var cwd = Environment.CurrentDirectory;
-            var tokens = cwd.Split(Path.DirectorySeparatorChar);
-            CurrentWorkingDirectory = string.Join(Path.DirectorySeparatorChar.ToString(), 
-                tokens.Take(tokens.Length - 3)); // back three
+            CurrentWorkingDirectory = Environment.CurrentDirectory;
+            //var cwd = Environment.CurrentDirectory;
+            //var tokens = cwd.Split(Path.DirectorySeparatorChar);
+            //CurrentWorkingDirectory = string.Join(Path.DirectorySeparatorChar.ToString(), 
+            //    tokens.Take(tokens.Length - 3)); // back three
 
             Console.WriteLine("Please select a sheet to parse:");
             var fd = new OpenFileDialog();
