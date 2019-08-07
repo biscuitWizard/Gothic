@@ -1,0 +1,5 @@
+# Spell Parser Output Ignore
+[Oo]utput/
+
+# Spell Parser Packages
+[Pp]ackages/
